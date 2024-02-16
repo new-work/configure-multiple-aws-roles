@@ -145,7 +145,7 @@ jobs:
 
 There are two problems
 
-1. GitHub actions do not support unsetting and env var once it has been set, you cannot even set it to `""`
+1. GitHub actions do not support unsetting and env var once it has been set, you cannot even set it to `""`. Aka `echo "AWS_ACCESS_KEY_ID=" >> $GITHUB_ENV` does not work. Read more here https://github.com/actions/runner/issues/1126
 1. AWS SDKs prefers using the `AWS_*` env variables over profile.
 
 This necessitates that the three env vars need to be unset in every step that you run. Below can be used for linux/macos runners.
