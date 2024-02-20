@@ -1,6 +1,6 @@
 name: Configure Multiple AWS Roles
 
-description: Drop-in replacement for aws-actions/configure-aws-credentials with additional features to configure multiple AWS roles as AWS profiles.
+description: Drop-in replacement for aws-actions/configure-aws-credentials with additional features to configure multiple AWS roles.
 
 branding:
   icon: "cloud"
