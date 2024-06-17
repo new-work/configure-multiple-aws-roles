@@ -1,6 +1,6 @@
-# Configure AWS Credential Profiles for GitHub Actions
+# Configure Multiple AWS Credential Profiles for GitHub Actions
 
-Drop-in replacement for aws-actions/configure-aws-credentials with additional features to configure multiple AWS roles as AWS profiles.
+Drop-in replacement for `aws-actions/configure-aws-credentials` with additional features to configure multiple AWS roles as AWS profiles.
 
 The primary reason this action exists is to address using multiple AWS Roles at the same time in GitHub Actions. The [official action](https://github.com/marketplace/actions/configure-aws-credentials-action-for-github-actions) is not sufficient for multiple account usage as it only sets one set of AWS environment variables at a time. Trying to reuse the action simply overwrites the environment variables with the new credentials.
 
