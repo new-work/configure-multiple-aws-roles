@@ -108,15 +108,6 @@ outputs:
 runs:
   using: "composite"
   steps:
-    # Unset the variables if they are empty strings, sometimes they do funny things
-    - name: Unset empty AWS env vars
-      id: unset-empty-env-vars
-      shell: bash
-      run: |
-        if   [[ -z "$AWS_ACCESS_KEY_ID" ]]   ; then unset AWS_ACCESS_KEY_ID;     fi
-        if   [[ -z "$AWS_SESSION_TOKEN" ]]   ; then unset AWS_SESSION_TOKEN;     fi
-        if [[ -z "$AWS_SECRET_ACCESS_KEY" ]] ; then unset AWS_SECRET_ACCESS_KEY; fi
-
     - name: Get AWS Credentials
       id: aws-credentials
       uses: aws-actions/configure-aws-credentials@v4
